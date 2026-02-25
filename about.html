@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Grade 10 Saturn</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top, #1a1a3a, #0b0f2a 70%);
+    color:white;
+}
+
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
+.stars span{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    opacity:0.8;
+    animation:move 40s linear infinite;
+}
+
+@keyframes move{
+    from{transform:translateY(0);}
+    to{transform:translateY(-1000px);}
+}
+
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 8%;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(12px);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+
+.header{
+    text-align:center;
+    padding:80px 20px 30px;
+}
+
+.header h1{
+    font-size:40px;
+    background:linear-gradient(90deg,#ffd700,#ffffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+
+.section{
+    padding:40px 8%;
+    text-align:center;
+}
+
+.section p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.6;
+}
+
+
+.students{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding:40px 8%;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-radius:18px;
+    padding:25px;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(255,215,0,0.6);
+}
+
+.card h2{
+    color:#ffd700;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.card ul{
+    list-style:none;
+    line-height:1.8;
+    font-size:14px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<nav>
+    <h2>🪐 Grade 10 Saturn</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="officers.html">Officers</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+</nav>
+
+<section class="header">
+    <h1>About Our Section</h1>
+</section>
+
+<section class="section">
+    <p>
+        Grade 10 Saturn is composed of passionate, talented, and determined students.
+        Together we aim for excellence, leadership, unity, and success.
+    </p>
+</section>
+
+<section class="students">
+
+    <!-- GIRLS -->
+    <div class="card">
+        <h2>🌸 Girls</h2>
+        <ul>
+            <li>1. Kyle Lyn E. Cornelia</li>
+            <li>2. Elicha S. Paciente</li>
+            <li>3. Lianne Margarette P. Bedia</li>
+            <li>4. Hannah A. Jagorin</li>
+            <li>5. Arianna P. Navarra</li>
+            <li>6. Kriza Mae B. Bruno</li>
+            <li>7. Julliene Caye L. Jacar</li>
+            <li>8. Myiesha Mae C. Deluso</li>
+            <li>9. Keren Hadassah G. Zaldarriaga</li>
+            <li>10. Le T. Tram</li>
+        </ul>
+    </div>
+
+    <!-- BOYS -->
+    <div class="card">
+        <h2>🚀 Boys</h2>
+        <ul>
+            <li>1. Jonmer Nava Baldeviso</li>
+            <li>2. Patrick Vinz D. Gabayno</li>
+            <li>3. Francis Jonathan T. Logronio</li>
+            <li>4. Kurt Ezekiel Lee D. Juntoria</li>
+            <li>5. Sam Riel A. Apusaga</li>
+            <li>6. Jude Geelou M. Jabadan</li>
+            <li>7. Jake M. Cortez</li>
+            <li>8. Art Matthew L. Advincula</li>
+            <li>9. Karl Elijah De la Cruz</li>
+            <li>10. Ryle Noah Enriquez</li>
+        </ul>
+    </div>
+
+</section>
+
+
+<script>
+const starsContainer = document.querySelector(".stars");
+for(let i=0;i<200;i++){
+    let star=document.createElement("span");
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+    star.style.animationDuration=(20+Math.random()*20)+"s";
+    starsContainer.appendChild(star);
+}
+</script>
+
+</body>
+</html>

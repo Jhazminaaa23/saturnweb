@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supreme Officers | Grade 10 Saturn</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top, #1a1a3a, #0b0f2a 70%);
+    color:white;
+    overflow-x:hidden;
+}
+
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:-3;
+}
+
+.stars span{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    opacity:0.8;
+    animation:starMove 40s linear infinite;
+}
+
+@keyframes starMove{
+    from{transform:translateY(0);}
+    to{transform:translateY(-1000px);}
+}
+
+
+.saturn{
+    position:absolute;
+    top:80px;
+    left:50%;
+    transform:translateX(-50%);
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, #f5d07a, #c79c3d);
+    box-shadow:0 0 40px rgba(255,215,0,0.6);
+    z-index:-1;
+}
+
+.ring{
+    position:absolute;
+    width:280px;
+    height:80px;
+    border:4px solid rgba(255,215,0,0.6);
+    border-radius:50%;
+    top:140px;
+    left:50%;
+    transform:translateX(-50%) rotate(20deg);
+    animation:rotateRing 12s linear infinite;
+    z-index:-1;
+}
+
+@keyframes rotateRing{
+    from{transform:translateX(-50%) rotate(0deg);}
+    to{transform:translateX(-50%) rotate(360deg);}
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 8%;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(12px);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+.header{
+    text-align:center;
+    padding:120px 20px 20px;
+}
+
+.header h1{
+    font-size:42px;
+    background:linear-gradient(90deg,#ffd700,#ffffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+
+.triangle{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:35px;
+    padding:40px 10%;
+}
+
+.row{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+
+.card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(18px);
+    border-radius:18px;
+    padding:20px;
+    width:220px;
+    text-align:center;
+    transition:0.4s;
+    animation:float 4s ease-in-out infinite;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.05);
+    box-shadow:0 0 25px rgba(255,215,0,0.7);
+}
+
+.card h3{
+    color:#ffd700;
+    margin-bottom:8px;
+    font-size:16px;
+}
+
+.card p{
+    font-size:14px;
+}
+
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-8px);}
+    100%{transform:translateY(0);}
+}
+
+
+.adviser{
+    border:2px solid gold;
+    box-shadow:0 0 40px rgba(255,215,0,1);
+}
+
+
+
+@media(max-width:768px){
+    .saturn, .ring{
+        display:none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+<div class="saturn"></div>
+<div class="ring"></div>
+
+<nav>
+    <h2>🪐 Grade 10 Saturn</h2>
+    <div>
+        <a href="homepage.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="officers.html">Officers</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+</nav>
+
+<section class="header">
+    <h1>Supreme Leadership Pyramid</h1>
+</section>
+
+<section class="triangle">
+
+    <div class="row">
+        <div class="card adviser">
+            <h3>Adviser 👑</h3>
+            <p>Kieth Dune Gallos</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <h3>President</h3>
+            <p>Myiesha Mae Deluso</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <h3>Vice President</h3>
+            <p>Julz Justin Adrian Salarza</p>
+        </div>
+        <div class="card">
+            <h3>Secretary</h3>
+            <p>Art Matthew Advincula</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <h3>Treasurer</h3>
+            <p>Melbourne Dimasu-ay</p>
+        </div>
+        <div class="card">
+            <h3>Auditor</h3>
+            <p>Hannah Jagorin</p>
+        </div>
+        <div class="card">
+            <h3>Business Manager</h3>
+            <p>Lianne Margarette Bedia</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <h3>Assistant Manager</h3>
+            <p>Scott Ivan Florendia</p>
+        </div>
+        <div class="card">
+            <h3>P.O</h3>
+            <p>Bernadine Pearl Aguinido</p>
+        </div>
+        <div class="card">
+            <h3>P.O</h3>
+            <p>Jan Jeylord Miole</p>
+        </div>
+        <div class="card">
+            <h3>Muse</h3>
+            <p>Keren Hadassah Zaldarriaga</p>
+        </div>
+        <div class="card">
+            <h3>Escort</h3>
+            <p>John Laurence Asong</p>
+        </div>
+    </div>
+
+</section>
+
+
+
+<script>
+const starsContainer = document.querySelector(".stars");
+for(let i=0;i<250;i++){
+    let star=document.createElement("span");
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+    star.style.animationDuration=(20+Math.random()*20)+"s";
+    starsContainer.appendChild(star);
+}
+</script>
+
+</body>
+</html>
